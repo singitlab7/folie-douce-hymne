@@ -35,23 +35,24 @@
             display: flex;
             flex-direction: column;
             
-            /* --- MODIFICATION 1 : On aligne le contenu en bas de la page --- */
-            justify-content: flex-end; 
+            /* On revient au centrage vertical */
+            justify-content: center; 
             
             align-items: center;
             height: 100%;
             text-align: center;
-            
-            /* --- MODIFICATION 2 : On ajoute une marge en bas pour décoller le lecteur du bord --- */
-            padding-bottom: 10vh; /* 10% de la hauteur de l'écran, c'est mieux que des cm */
-            box-sizing: border-box; /* Important pour que le padding soit bien calculé */
+            padding: 20px;
+            box-sizing: border-box;
             
             background-color: rgba(0, 0, 0, 0.2); 
         }
 
         audio {
-            /* On enlève la marge du haut qui n'est plus nécessaire */
-            /* margin-top: 30px; */ 
+            /* --- MODIFICATION PRINCIPALE ICI --- */
+            /* On utilise une marge en haut pour pousser le lecteur depuis le centre. */
+            /* Augmentez ou diminuez "20vh" pour ajuster la position. */
+            margin-top: 20vh; 
+            
             max-width: 90%;
             width: 500px;
             border-radius: 50px;
