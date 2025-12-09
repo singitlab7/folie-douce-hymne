@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- TITRE À MODIFIER -->
+    <title>La Folie Douce - Nouveau Titre</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap" rel="stylesheet">
+
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+            font-family: 'Poppins', sans-serif;
+            overflow: hidden; /* Pour que l'image de fond ne dépasse pas */
+        }
+
+        .background-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            /* --- NOM DE LA PHOTO À MODIFIER ICI --- */
+            background-image: url('fond-folie-douce.jpg'); 
+            background-size: cover; /* L'image couvre tout l'écran */
+            background-position: center;
+            filter: brightness(0.7); /* Assombrit un peu l'image pour que le texte ressorte */
+        }
+        
+        .content-container {
+            position: relative;
+            z-index: 2;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        h1 {
+            font-size: 3em;
+            text-shadow: 2px 2px 8px rgba(0,0,0,0.8);
+        }
+
+        audio {
+            margin-top: 30px;
+            max-width: 90%;
+            border-radius: 50px;
+            border: 2px solid white;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.5);
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="background-container"></div>
+
+    <div class="content-container">
+        <!-- TITRE À AFFICHER SUR LA PAGE -->
+        <h1>La Folie Douce</h1>
+
+        <!-- LECTEUR AUDIO -->
+        <!-- --- NOM DE LA MUSIQUE À MODIFIER ICI --- -->
+        <audio controls src="musique-folie-douce.mp3"></audio>
+    </div>
+
+</body>
+</html>
