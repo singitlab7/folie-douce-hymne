@@ -15,7 +15,7 @@
             width: 100%;
             height: 100%;
             font-family: 'Poppins', sans-serif;
-            overflow: hidden; /* Pour que l'image de fond ne dépasse pas */
+            overflow: hidden;
         }
 
         .background-container {
@@ -24,10 +24,10 @@
             left: 0;
             width: 100%;
             height: 100%;
-            /* --- MODIFICATION 1 : J'ai changé .jpg en .png pour correspondre à votre fichier --- */
             background-image: url('fond-folie-douce.png'); 
-            background-size: cover; /* L'image couvre tout l'écran */
-            background-position: center;
+            background-size: cover;
+            /* --- MODIFICATION ICI : On aligne l'image en haut au lieu du centre --- */
+            background-position: top; 
         }
         
         .content-container {
@@ -40,14 +40,13 @@
             height: 100%;
             text-align: center;
             padding: 20px;
-            /* On ajoute un léger voile noir pour que le lecteur soit plus visible */
             background-color: rgba(0, 0, 0, 0.2); 
         }
 
         audio {
             margin-top: 30px;
             max-width: 90%;
-            width: 500px; /* On donne une largeur fixe pour un meilleur look */
+            width: 500px;
             border-radius: 50px;
             border: 2px solid white;
             box-shadow: 0 4px 20px rgba(0,0,0,0.5);
@@ -60,7 +59,7 @@
     <div class="background-container"></div>
 
     <div class="content-container">
-        <!-- MODIFICATION 2 : J'ai supprimé le titre H1 qui s'affichait par-dessus l'image -->
+        <!-- Le titre a été supprimé pour laisser celui de l'image -->
 
         <!-- LECTEUR AUDIO -->
         <audio controls src="musique-folie-douce.mp3"></audio>
