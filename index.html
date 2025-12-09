@@ -26,7 +26,6 @@
             height: 100%;
             background-image: url('fond-folie-douce.png'); 
             background-size: cover;
-            /* --- MODIFICATION ICI : On aligne l'image en haut au lieu du centre --- */
             background-position: top; 
         }
         
@@ -35,16 +34,24 @@
             z-index: 2;
             display: flex;
             flex-direction: column;
-            justify-content: center;
+            
+            /* --- MODIFICATION 1 : On aligne le contenu en bas de la page --- */
+            justify-content: flex-end; 
+            
             align-items: center;
             height: 100%;
             text-align: center;
-            padding: 20px;
+            
+            /* --- MODIFICATION 2 : On ajoute une marge en bas pour décoller le lecteur du bord --- */
+            padding-bottom: 10vh; /* 10% de la hauteur de l'écran, c'est mieux que des cm */
+            box-sizing: border-box; /* Important pour que le padding soit bien calculé */
+            
             background-color: rgba(0, 0, 0, 0.2); 
         }
 
         audio {
-            margin-top: 30px;
+            /* On enlève la marge du haut qui n'est plus nécessaire */
+            /* margin-top: 30px; */ 
             max-width: 90%;
             width: 500px;
             border-radius: 50px;
@@ -59,10 +66,8 @@
     <div class="background-container"></div>
 
     <div class="content-container">
-        <!-- Le titre a été supprimé pour laisser celui de l'image -->
-
-        <!-- LECTEUR AUDIO -->
-        <audio controls src="musique-folie-douce.mp3"></audio>
+        <!-- LECTEUR AUDIO AVEC L'OPTION "NODOWNLOAD" -->
+        <audio controls controlsList="nodownload" src="musique-folie-douce.mp3"></audio>
     </div>
 
 </body>
