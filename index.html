@@ -3,8 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- TITRE À MODIFIER -->
-    <title>La Folie Douce - Nouveau Titre</title>
+    <title>La Folie Douce - Hymne</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap" rel="stylesheet">
@@ -25,11 +24,10 @@
             left: 0;
             width: 100%;
             height: 100%;
-            /* --- NOM DE LA PHOTO À MODIFIER ICI --- */
-            background-image: url('fond-folie-douce.jpg'); 
+            /* --- MODIFICATION 1 : J'ai changé .jpg en .png pour correspondre à votre fichier --- */
+            background-image: url('fond-folie-douce.png'); 
             background-size: cover; /* L'image couvre tout l'écran */
             background-position: center;
-            filter: brightness(0.7); /* Assombrit un peu l'image pour que le texte ressorte */
         }
         
         .content-container {
@@ -40,19 +38,16 @@
             justify-content: center;
             align-items: center;
             height: 100%;
-            color: white;
             text-align: center;
             padding: 20px;
-        }
-
-        h1 {
-            font-size: 3em;
-            text-shadow: 2px 2px 8px rgba(0,0,0,0.8);
+            /* On ajoute un léger voile noir pour que le lecteur soit plus visible */
+            background-color: rgba(0, 0, 0, 0.2); 
         }
 
         audio {
             margin-top: 30px;
             max-width: 90%;
+            width: 500px; /* On donne une largeur fixe pour un meilleur look */
             border-radius: 50px;
             border: 2px solid white;
             box-shadow: 0 4px 20px rgba(0,0,0,0.5);
@@ -65,11 +60,9 @@
     <div class="background-container"></div>
 
     <div class="content-container">
-        <!-- TITRE À AFFICHER SUR LA PAGE -->
-        <h1>La Folie Douce</h1>
+        <!-- MODIFICATION 2 : J'ai supprimé le titre H1 qui s'affichait par-dessus l'image -->
 
         <!-- LECTEUR AUDIO -->
-        <!-- --- NOM DE LA MUSIQUE À MODIFIER ICI --- -->
         <audio controls src="musique-folie-douce.mp3"></audio>
     </div>
 
